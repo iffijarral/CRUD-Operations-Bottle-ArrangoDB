@@ -1,0 +1,24 @@
+% import x
+% include("_header.html")
+
+    <p id="message"></p>
+    <section id="login">
+        <h1>
+            Login
+        </h1>
+        <div id="error"></div>
+        <form action="#" method="post" id="auth_frm">
+            <input name="user_email" type="text" placeholder="Email" mix-check="{{x.USER_EMAIL_REGEX}}">        
+    
+            <input name="user_password" type="password" placeholder="Password" mix-check="{{x.USER_PASSWORD_REGEX}}">
+            
+            <button mix-post="/login" mix-data="#auth_frm">
+                Login
+            </button>
+            <!-- <a href="#" mix-get="/signup">Don't have an account, Sign up </a> -->
+            
+        </form>
+    </section>
+
+
+% include("_footer.html")  

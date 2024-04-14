@@ -1,5 +1,5 @@
 % import x
-
+<div id="message"></div>
 <form id="frm_user" autocomplete="off">
     <div>
         <label for="">
@@ -20,7 +20,28 @@
         mix-check="{{x.USER_LAST_NAME_REGEX}}" 
         name="user_last_name" type="text"
     >   
-    </div>     
+    </div> 
+    
+    <div>
+        <label for="">
+            <span>username</span>
+            <span>{{x.USER_USERNAME_MIN}} to {{x.USER_USERNAME_MAX}}</span>
+        </label>            
+    <input
+        mix-check="{{x.USER_USERNAME_REGEX}}" 
+        name="user_username" type="text"
+    >   
+    </div>  
+    <div>
+        <label for="">
+            <span>gender</span>            
+        </label>            
+        <select name="user_gender">
+            <option value="">gender</option>
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select>
+    </div>    
     <button
         mix-post="/users"
         mix-data="#frm_user"
